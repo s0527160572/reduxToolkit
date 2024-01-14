@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 const BookDetails = () => {
-    const selected=useSelector(st=>st.books.selectedBook);
+    const selected=useSelector(st=>st.Books.selectedBook);
     return (
         <div>
             פרטי שיר נבחר:

@@ -5,9 +5,10 @@ const initialState={
     {id:2,name:"21 un one house 2", artist:"root rapaport",price:10},
     {id:3,name:"21 un one house 3", artist:"root rapaport",price:10},
     {id:4,name:"21 un one house 4", artist:"root rapaport",price:10}],
-    selectedBook:null
+    selectedBook:null,
+    toAdd:null
 }
-export const booksSlice=createSlice({
+export const BooksSlice=createSlice({
     name:'library',
     initialState:initialState,
     reducers:{
@@ -22,10 +23,13 @@ export const booksSlice=createSlice({
         },
         selectedBook:(state,action)=>{
             state.selectedBook=action.payload;
+        },
+        toAdd:(state,action)=>{
+           state.toAdd=action.payload
         }
 
 
     }
 })
-export const {addBook, removeBook, selectedBook} = booksSlice.actions;
-export default booksSlice.reducer;
+export const {addBook, removeBook, selectedBook, toAdd} = BooksSlice.actions;
+export default BooksSlice.reducer;

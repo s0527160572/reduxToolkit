@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addBook, removeBook, selectedBook } from "./booksSlice";
+import { removeBook, selectedBook } from "./BooksSlice";
 const ShowBooks = ({ one }) => {
 
     let dispatch = useDispatch();
